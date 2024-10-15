@@ -19,6 +19,9 @@ export class ReportDto {
     @Expose()
     mileage: number
 
+    @Expose()
+    approved: boolean
+
     @Transform(({obj}) => obj.user.id)// still allow to access the user orignal User entity and only expose the user id then assign it to the userId new property added
     @Expose()
     userId: number;
